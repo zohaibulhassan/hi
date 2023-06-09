@@ -15,7 +15,7 @@ class SubscriptionEndpoint extends CollectionEndpointAbstract
     /**
      * @var string
      */
-    const RESOURCE_ID_PREFIX = 'sub_';
+    public const RESOURCE_ID_PREFIX = 'sub_';
 
     /**
      * Get the object that is used by this API endpoint. Every API endpoint uses one type of object.
@@ -81,7 +81,8 @@ class SubscriptionEndpoint extends CollectionEndpointAbstract
      * @param string $customerId
      *
      * @param array $data
-     * @return Order
+     *
+     * @return Subscription
      * @throws ApiException
      */
     public function update($customerId, $subscriptionId, array $data = [])

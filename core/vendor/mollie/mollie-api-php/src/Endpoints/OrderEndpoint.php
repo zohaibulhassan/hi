@@ -13,7 +13,7 @@ class OrderEndpoint extends CollectionEndpointAbstract
     /**
      * @var string
      */
-    const RESOURCE_ID_PREFIX = 'ord_';
+    public const RESOURCE_ID_PREFIX = 'ord_';
 
     /**
      * Get the object that is used by this API endpoint. Every API endpoint uses one
@@ -80,7 +80,6 @@ class OrderEndpoint extends CollectionEndpointAbstract
      * Will throw a ApiException if the order id is invalid or the resource cannot
      * be found.
      *
-     * @param string $paymentId
      * @param array $parameters
      * @return Order
      * @throws ApiException
