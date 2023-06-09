@@ -7,8 +7,11 @@
 @include($activeTemplate.'partials.services')
 @include($activeTemplate.'partials.count')
 @include($activeTemplate.'partials.reviews')
-
-
+<!-- @if($sections->secs != null)
+    @foreach(json_decode($sections->secs) as $sec)
+        @include($activeTemplate.'sections.'.$sec)
+    @endforeach
+@endif -->
 
     <!-- @include($activeTemplate.'partials.hot_deal')
 
