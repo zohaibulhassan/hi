@@ -1,0 +1,8 @@
+Home Page: http://localhost/laravel/dealshop
+
+Admin Info:
+http://localhost/laravel/dealshop/admin
+Admin User: admin
+Admin Password: alimadmin
+
+
