@@ -12,33 +12,33 @@ final class CurlMollieHttpAdapter implements MollieHttpAdapterInterface
     /**
      * Default response timeout (in seconds).
      */
-    const DEFAULT_TIMEOUT = 10;
+    public const DEFAULT_TIMEOUT = 10;
 
     /**
      * Default connect timeout (in seconds).
      */
-    const DEFAULT_CONNECT_TIMEOUT = 2;
+    public const DEFAULT_CONNECT_TIMEOUT = 2;
 
     /**
      * HTTP status code for an empty ok response.
      */
-    const HTTP_NO_CONTENT = 204;
+    public const HTTP_NO_CONTENT = 204;
 
     /**
      * The maximum number of retries
      */
-    const MAX_RETRIES = 5;
+    public const MAX_RETRIES = 5;
 
     /**
      * The amount of milliseconds the delay is being increased with on each retry.
      */
-    const DELAY_INCREASE_MS = 1000;
+    public const DELAY_INCREASE_MS = 1000;
 
     /**
      * @param string $httpMethod
      * @param string $url
      * @param array $headers
-     * @param $httpBody
+     * @param string $httpBody
      * @return \stdClass|void|null
      * @throws \Mollie\Api\Exceptions\ApiException
      * @throws \Mollie\Api\Exceptions\CurlConnectTimeoutException
@@ -64,7 +64,7 @@ final class CurlMollieHttpAdapter implements MollieHttpAdapterInterface
      * @param string $httpMethod
      * @param string $url
      * @param array $headers
-     * @param $httpBody
+     * @param string $httpBody
      * @return \stdClass|void|null
      * @throws \Mollie\Api\Exceptions\ApiException
      */
@@ -147,8 +147,8 @@ final class CurlMollieHttpAdapter implements MollieHttpAdapterInterface
     }
 
     /**
-     * @param $curlErrorNumber
-     * @param $executionTime
+     * @param int $curlErrorNumber
+     * @param string|float $executionTime
      * @return bool
      */
     protected function isConnectTimeoutError($curlErrorNumber, $executionTime)
